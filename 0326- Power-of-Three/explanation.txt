@@ -1,0 +1,29 @@
+Problem: [326. Power of Three](https://leetcode.com/problems/power-of-three/)
+
+---
+
+Description:
+Given an integer n, return true if it is a power of three. Otherwise, return false.
+An integer n is a power of three, if there exists an integer x such that n == 3x.
+
+---
+
+Approach:
+- We start with 3¹ as the base.
+- Then multiply with 3 till the number 'n' is reached or higher.
+- As we know the condition when to stop, while loop is preferred.
+- When the loop ends we check if the final ans is equal to the specified n or not.
+- If its equal we return True else False.
+- As this approach needs the ans to start with 3 to check the case for 3º we use a if-statement at the start.
+
+---
+
+Time Complexity:
+- O(log n)
+Because there is a single loop running.
+
+Space Complexity:
+- O(1)
+We are using a single variable to store the result.
+
+---

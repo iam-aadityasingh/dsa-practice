@@ -1,0 +1,16 @@
+# Problem Link:
+https://leetcode.com/problems/remove-element/
+
+# Problem Description:
+Given an array nums and a value val, remove all instances of that value in-place and return the new length. Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+# Approach:
+1. Use two pointers: one (i) to iterate over the array and another (index) to track where non-val elements should go.
+2. Traverse the array. If the current element is not equal to val, copy it to the position indicated by the `index` pointer.
+3. After the loop, the `index` pointer will indicate the new length of the array (the number of non-val elements).
+
+# Time Complexity:
+O(n), where n is the number of elements in the array.
+
+# Space Complexity:
+O(1), as we only use two pointers for in-place modifications.

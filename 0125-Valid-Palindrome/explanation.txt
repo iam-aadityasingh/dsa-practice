@@ -1,0 +1,21 @@
+# Problem Link:
+https://leetcode.com/problems/valid-palindrome/
+
+# Problem Description:
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+# Approach:
+1. Initialize two pointers: `start` at 0 and `end` at the last index.
+2. Move `start` forward if it's not an alphanumeric character.
+3. Move `end` backward if it's not an alphanumeric character.
+4. Compare characters at `start` and `end`. If they don't match after lowering case, return False.
+5. If they match, move both pointers towards the center.
+6. If the whole string is validated without mismatch, return True.
+
+# Time Complexity:
+O(n), where n is the length of the string.
+
+# Space Complexity:
+O(1), ignoring the input string.

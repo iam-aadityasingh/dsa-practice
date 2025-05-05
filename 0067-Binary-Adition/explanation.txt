@@ -1,0 +1,17 @@
+# Problem Link:
+https://leetcode.com/problems/add-binary/
+
+# Problem Description:
+Given two binary strings a and b, return their sum as a binary string.
+
+# Approach:
+1. Convert both binary strings to decimal using int(a, 2) and int(b, 2).
+2. Add the two decimal integers.
+3. Convert the sum back to binary using bin(), and slice off the "0b" prefix using [2:].
+4. Return the resulting binary string.
+
+# Time Complexity:
+O(n + m), where n and m are the lengths of the input strings.
+
+# Space Complexity:
+O(1), no extra space apart from conversion.

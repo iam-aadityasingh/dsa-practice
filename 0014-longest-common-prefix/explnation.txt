@@ -1,0 +1,25 @@
+# Problem Link:
+https://leetcode.com/problems/longest-common-prefix/
+
+# Problem Description:
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+# Approach:
+1. First, check if the input list is empty. If yes, return an empty string.
+2. Take the shortest string in the array (since the longest possible prefix can't be longer than that).
+3. Iterate through every string in the list:
+   - While the current string does not start with the current prefix guess:
+     - Remove the last character from the prefix guess.
+     - If the prefix becomes empty, return "" (no common prefix).
+4. Return the final prefix after comparing all strings.
+
+This approach narrows down the prefix efficiently by shrinking it only when necessary.
+
+# Time Complexity:
+O(S), where S is the sum of all characters in all strings.  
+In the worst case, each character in the shortest string might be compared multiple times.
+
+# Space Complexity:
+O(1), no extra space used apart from a few variables.
