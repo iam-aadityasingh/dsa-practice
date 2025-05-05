@@ -1,0 +1,12 @@
+Steps to Push Your Local Folder to GitHub
+
+git init
+git remote add origin https://github.com/iam-aadityasingh/dsa-practice.git
+git add .
+git commit -m "Initial commit with LeetCode solutions"
+git push -u origin main
+
+for every new file:
+    git add .
+    git commit -m "Added solution for problem #XXXX: Problem Name"
+git push origin main

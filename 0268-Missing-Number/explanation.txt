@@ -1,0 +1,24 @@
+# Problem Link: 
+https://leetcode.com/problems/missing-number
+
+# Problem Description:
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+# Approach:
+1. Use the formula for the sum of first n natural numbers: n * (n + 1) // 2.
+2. This gives the expected total sum of numbers from 0 to n.
+3. Then subtract the actual sum of the input array from this expected sum.
+4. The difference will be the missing number.
+
+# Time Complexity: 
+O(n), due to sum(nums)
+
+# Space Complexity: 
+O(1), constant space
+
+Example:
+Input: nums = [3, 0, 1]
+Expected sum = 3 * (3 + 1) // 2 = 6
+Actual sum = 4
+Missing number = 6 - 4 = 2
+Output: 2

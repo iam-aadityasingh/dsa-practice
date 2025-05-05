@@ -1,0 +1,33 @@
+Problem: [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+
+---
+
+Description:
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+Note that you must do this in-place without making a copy of the array.
+
+---
+
+Approach:
+- Use a two-pointer technique:
+- One pointer (index) tracks the position to place the next non-zero element.
+- The other pointer (i) scans through the array.
+- For every non-zero element at position i, swap it with the element at position index (if i != index), and then increment index.
+- This ensures all non-zero elements are shifted to the front in their original order, and all zeros are pushed to the end.
+- The operation is done in-place without using extra memory.
+
+---
+
+Time Complexity:
+- O(n)
+Because we iterate through the list only once.
+
+Space Complexity:
+- O(1)
+We use in-place swaps.
+
+---
+
+Notes:
+- There might me faster solutions.

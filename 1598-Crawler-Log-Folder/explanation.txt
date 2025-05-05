@@ -1,0 +1,26 @@
+# Problem Link:
+https://leetcode.com/problems/crawler-log-folder/
+
+# Problem Description:
+The file system keeps a log each time a change folder operation is performed.
+The operations are described below:
+    -"../" : Move to the parent folder of the current folder. (If you are already in the main folder, remain in the same folder).
+    -"./" : Remain in the same folder.
+    -"x/" : Move to the child folder named x (This folder is guaranteed to always exist).
+You are given a list of strings logs where logs[i] is the operation performed at the i'th step.
+The file system starts in the main folder, then the operations in logs are performed.
+Return the minimum number of operations needed to go back to the main folder after the change folder operations.
+
+# Approach:
+1. Use a stack to store and iterate over the file operations.
+2. The operations occurs in a Last-In, First-Out (LIFO) manner making stack the best choice.
+3. There are only 2 meaning full operations that change file structure.
+4. The '../' takes you to the parent while d(n) takes you to the child folder.
+5. Every time we use the d(n) operation we go a step deeper in the structure and the '../' brings is up.
+6. At the end to get mack to the main folder we need to do operations equal to the no.of elements in the stack. 
+
+# Time Complexity:
+O(n), as the operations are performed in a single linear fashion.
+
+# Space Complexity:
+O(n), because the stack size increases as the input, in a 1:1 ratio.

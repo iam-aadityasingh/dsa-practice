@@ -1,0 +1,18 @@
+# Problem Link:
+https://leetcode.com/problems/rabbits-in-forest/
+
+# Problem Description:
+We ask each rabbit how many other rabbits have the same color. The i-th rabbit's answer is stored in answers[i]. We need to calculate the minimum total number of rabbits in the forest based on these replies.
+
+# Approach:
+1. Use a Counter to track how many rabbits gave each answer.
+2. If a rabbit says "x", they imply a group of (x + 1) rabbits of their color.
+3. If multiple rabbits give the same answer, divide them into groups of size (x + 1).
+4. If not enough rabbits to complete the last group, still count it as a full group.
+5. Multiply the number of groups by group size and add to total.
+
+# Time Complexity:
+O(n), where n is the number of answers.
+
+# Space Complexity:
+O(n), for storing the frequency map of answers.
